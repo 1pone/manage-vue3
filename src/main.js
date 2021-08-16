@@ -3,15 +3,9 @@ import App from './App.vue'
 import router from './router'
 import ElementPlus from 'element-plus'
 import 'element-plus/lib/theme-chalk/index.css';
-import axios from 'axios'
-import config from './config'
-
-console.log(import.meta.env);
-
-axios.get(config.mockApi+'/login').then(res=>{
-    console.log(res.data);
-})
+import request from './utils/request'
 
 const app = createApp(App)
 
+app.config.globalProperties.$request = request // 重要！全局挂载对象
 app.use(router).use(ElementPlus).mount('#app')

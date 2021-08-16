@@ -43,6 +43,11 @@ export default {
         type: "success",
       });
       console.log(res);
+      // this.$storage.setItem('userInfo', {userName: res.userName, userId: res.userId, token: res.token})
+      this.$storage.setItem("userId",res.userId)
+      this.$storage.setItem("userName",res.userName)
+      this.$storage.setItem("token",res.token)
+      this.$storage.clearItem('userName')
     });
   },
 };

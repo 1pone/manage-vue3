@@ -19,5 +19,6 @@ const EnvConfig = {
 export default {
     env,
     mock: true, //mock总开关
-    ...EnvConfig[env] // 动态传递环境变量，解构封装
+    ...EnvConfig[env], // 动态传递环境变量，解构封装
+    namespace: 'manage', // localStorage命名空间
 }

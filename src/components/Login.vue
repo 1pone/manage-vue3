@@ -1,6 +1,5 @@
 <template>
   <div><h1>登录</h1></div>
-  <welcome msg="wp"></welcome>
   <el-button @click="goHome">回首页</el-button>
 </template>
 
@@ -10,7 +9,6 @@
 // const goHome = () => {
 //   router.push('/')
 // }
-import Welcome from "./Welcome.vue";
 import { ElMessage } from "element-plus";
 export default {
   name: "login",
@@ -18,9 +16,6 @@ export default {
     goHome() {
       this.$router.push("/");
     },
-  },
-  components: {
-    Welcome,
   },
   mounted() {
     // this.$request({

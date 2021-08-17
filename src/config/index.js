@@ -4,7 +4,7 @@
 const env = import.meta.env.MODE || 'prod' // import.meta.env 获取环境变量
 const EnvConfig = {
     dev: {
-        baseApi: '/',
+        baseApi: 'http://localhost:3000/api',
         mockApi: 'https://mockapi.eolinker.com/m5SDjuc53363c1b584b51effed22a811c2d9c0250bda615'
     },
     test: {
